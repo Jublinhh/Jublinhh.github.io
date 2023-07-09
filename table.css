@@ -1,0 +1,82 @@
+/*.but{*/
+/*    width: 65px;*/
+/*    height: 28px;*/
+/*    border-radius: 28px;*/
+/*    margin-left: 5em;*/
+/*}*/
+.but{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    margin: 1em 0 0 0 ;
+    background: transparent;
+    border: 2px solid orange;
+    color: orange;
+    padding: 10px 20px;
+    font-weight: bold;
+    z-index: 1;
+    overflow: hidden;
+}
+.but:before{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: orange;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    transform: skewX(45deg);
+    transition: all 1s;
+    z-index: 2;
+}
+.but:hover::before{
+    width: 180%;
+    z-index: -1;
+}
+.but:hover{
+    color: white;
+}
+
+
+
+body{
+    text-align: center;
+}
+table{
+    margin: 0 auto;
+    background-color: rgba(213,210,210,0.3);
+    text-align: center;
+    border-collapse: collapse;
+    width: 900px;
+}
+th,td{
+
+    font-size: 15px;
+    border: 1px solid #789279;
+    padding: 5px;
+
+    height: 25px;
+    line-height: 25px;
+}
+
+td:hover{
+    cursor: default;
+
+    background-color: #d5d2d2;
+
+}
+#container{
+    color: white;
+    border-radius: 25px;
+    margin: 0 auto;
+    width: 960px;
+    background-image: url("img.png");
+    background-size: 960px;
+    background-repeat: repeat-y;
+}
+input{
+    height: 30px;
+    border-radius: 25px;
+}

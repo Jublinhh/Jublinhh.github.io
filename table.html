@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <script src="dataOperate.js"></script>
+    <link href="table.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+  <h3 style="color: red">图书管理</h3>
+<!--  <input class="but" onclick="choseDel()" type="button"  value="删除">&emsp;-->
+<!--  <input class="but" onclick="insert()" type="button"  value="添加">&emsp;-->
+<!--  <input class="but" onclick="changeColor()" type="button" value="调色"><br>-->
+
+  <button class="but" onclick="choseDel()">删除</button>
+  <button class="but" onclick="insert()">添加</button>
+  <button class="but" onclick="changeColor()">调色</button>
+
+  <hr><br>
+  <table id="table">
+    <tr>
+      <th><input onclick="selectAll()" type="checkbox" name="chks" id="selectAll"></th></th>
+      <th>书名</th>
+      <th>书籍ISBN</th>
+      <th>图书编号</th>
+      <th>图书状态</th>
+      <th>价格</th>
+      <th>操作</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chks"></td>
+      <td>JavaScript模式</td>
+      <td>978-7-5123-2923-2</td>
+      <td>0000-0000-0000</td>
+      <td>已借</td>
+      <td>38.00</td>
+      <td>
+        <a style="cursor: default" onclick="update(this)">修改</a>
+        <a style="cursor: default" onclick="del(this)">删除</a>
+      </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chks"></td>
+      <td>精通CSS高级Web标准解决方案</td>
+      <td>7-115-15316-7</td>
+      <td>0000-0000-1000</td>
+      <td>已卖</td>
+      <td>38</td>
+      <td>
+        <a style="cursor: default" onclick="update(this)">修改</a>
+        <a style="cursor: default" onclick="del(this)">删除</a>
+      </td>
+    </tr>
+    </table>
+</div>
+</body>
+</html>
